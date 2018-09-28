@@ -1,0 +1,9 @@
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Source
+metadata:
+  name: k8sevents
+  namespace: default
+spec:
+  provisioner:
+    ref:
+      name: k8sevents

@@ -1,0 +1,6 @@
+runLatest:
+  configuration:
+    revisionTemplate:
+      spec:
+        container:
+          image: docker.io/grantr/knative-source-k8sevents:latest

@@ -1,0 +1,57 @@
+{
+  "controller": {
+    "metadata": {
+      "name": "source-k8sevents",
+      "selfLink": "/apis/metacontroller.k8s.io/v1alpha1/decoratorcontrollers/source-k8sevents",
+      "uid": "c6f9ce57-c27c-11e8-ad47-42010a8e007e",
+      "resourceVersion": "21560797",
+      "generation": 1,
+      "creationTimestamp": "2018-09-27T17:43:00Z",
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"metacontroller.k8s.io/v1alpha1\",\"kind\":\"DecoratorController\",\"metadata\":{\"annotations\":{},\"name\":\"source-k8sevents\",\"namespace\":\"\"},\"spec\":{\"hooks\":{\"sync\":{\"webhook\":{\"timeout\":\"30s\",\"url\":\"http://k8sevents-provisioner.default/\"}}},\"resources\":[{\"apiVersion\":\"eventing.knative.dev/v1alpha1\",\"resource\":\"sources\"}]}}\n"
+      }
+    },
+    "spec": {
+      "resources": [
+        {
+          "apiVersion": "eventing.knative.dev/v1alpha1",
+          "resource": "sources"
+        }
+      ],
+      "hooks": {
+        "sync": {
+          "webhook": {
+            "url": "http://k8sevents-provisioner.default/"
+          }
+        }
+      }
+    },
+    "status": {}
+  },
+  "object": {
+    "apiVersion": "eventing.knative.dev/v1alpha1",
+    "kind": "Source",
+    "metadata": {
+      "annotations": {
+        "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"eventing.knative.dev/v1alpha1\",\"kind\":\"Source\",\"metadata\":{\"annotations\":{},\"name\":\"k8sevents\",\"namespace\":\"default\"},\"spec\":{\"provisioner\":{\"ref\":{\"name\":\"k8sevents\"}}}}\n"
+      },
+      "clusterName": "",
+      "creationTimestamp": "2018-09-27T18:14:33Z",
+      "generation": 1,
+      "name": "k8sevents",
+      "namespace": "default",
+      "resourceVersion": "21561061",
+      "selfLink": "/apis/eventing.knative.dev/v1alpha1/namespaces/default/sources/k8sevents",
+      "uid": "2f234c25-c281-11e8-ad47-42010a8e007e"
+    },
+    "spec": {
+      "generation": 1,
+      "provisioner": {
+        "ref": {
+          "name": "k8sevents"
+        }
+      }
+    }
+  },
+  "attachments": {}
+}

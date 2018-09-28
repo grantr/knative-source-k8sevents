@@ -1,0 +1,9 @@
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Source
+metadata:
+  name: other
+  namespace: default
+spec:
+  provisioner:
+    ref:
+      name: other
